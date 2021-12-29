@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+</head>
+<body id="home">
+{% block content %}
+<!-- containt start -->
+        <!-- Main Section -->
+        <div class="showcase-area">
+          <div class="container">
+            <!-- Side Left -->
+            <div class="left">
+              <div class="big-title">
+                <h1>MRH CODERS</h1>
+                <h2>Choose your site now.</h2>
+              </div>
+              <p class="text">
+                Now you can request your site easily.
+               We can design your site with high professionalism and dazzling design
+              </p>
+            </div>
+            <!-- /Side Left -->
+
+            <!-- Side Right -->
+            <div class="right">
+              <img src="{% static 'img/1.png' %}" alt="Person Image" class="person" />
+            </div>
+            <!-- Side Right -->
+          </div>
+          
+        </div>
+
+        <!-- contain  end-->
+
+
+
+
+{% endblock content %}
+
+
+</body>
+</html>

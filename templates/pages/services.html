@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="services">
+
+{% block content %}
+
+
+
+ <div class="container">
+            <div class="head">
+                <h1>All Services</h1>
+                <hr>
+            </div>
+            <!-- row 1 -->
+            <div class="row justify-content-center p-4">
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="contents">
+                       
+                        <div class ="card">
+                            
+                            <div class ="card-img">
+                                <img src="{% static 'img\front.png' %}">
+                                <div class="cont">
+                                   
+                                    <a href="#">Show more</a>
+                                </div>
+                            </div>
+                      </div>
+                      <div class="card-footer">
+                        <small class="text-muted">Last updated 3 mins ago</small>
+                      </div>
+                </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="contents">
+                       
+                        <div class ="card">
+                            
+                            <div class ="card-img">
+                                <img src="{% static 'img\back.png' %}">
+                                <div class="cont">
+                                   
+                                    <a href="#">Show more</a>
+                                </div>
+                            </div>
+                        
+                        </div> 
+                        <div class="card-footer">
+                            <small class="text-muted">Last updated 3 mins ago</small>
+                          </div>
+                </div>
+             </div>
+             <div class="col-lg-4 col-md-6 col-sm-12" style="margin-top: 5px;">
+                <div class="contents">
+                 
+                    <div class ="card">
+                       
+                        <div class ="card-img">
+                            <img src="{% static 'img\mobile.png' %}">
+                            <div class="cont">
+                               
+                                <a href="#">Show more</a>
+                            </div>
+                        </div>
+                    
+                    </div>
+                 
+                    <div class="card-footer">
+                        <small class="text-muted">Last updated 3 mins ago</small>
+                      </div>
+            </div>
+         </div>
+                </div>
+               
+      
+         
+            
+           </div>
+            
+
+
+
+
+
+
+{% endblock content %}
+</body>
+</html>

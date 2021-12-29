@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category</title>
+</head>
+<body id="category">
+
+{% block content %}
+
+   <!-- category -->
+          <div class="container">
+              <div class="head">    
+                <h1 id="allcat">ALL Categories</h1>
+              </div>
+              
+              <div class="row justify-content-center p-4">
+
+
+                {% for project in all  %}
+                  
+               
+
+                <div class="col-lg-4 col-md-6 col-sm-12 projecthide
+                 project{{project.category.id}}">
+                    <div class="content">
+                        <div class="cont-img">
+                            <img src="{{project.img1.url}}" alt="">
+                        </div>
+                        <div class="btn-more">
+                            <a href="{% url 'details' project.id %}">{{project.Pname}}</a>
+                        </div>
+                    </div>
+                </div>
+
+                 {% endfor %}
+
+
+            
+
+              
+
+               
+
+
+             
+
+
+
+             
+
+
+              
+
+
+             
+
+          
+
+             
+
+
+              </div>
+            
+          </div>
+          <!-- /category -->
+
+
+{% endblock content %}
+
+
+</body>
+</html>

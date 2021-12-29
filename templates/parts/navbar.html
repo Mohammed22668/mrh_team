@@ -1,0 +1,76 @@
+{% load static %}
+<main>
+      <div class="big-wrapper light">
+        <img src="{% static 'img/shape.png' %}" alt="" class="shape" />
+        <!-- NavBar -->
+        <header>
+            <div class="container">
+            <!-- Logo -->
+            <div class="logo">
+              <img src="{% static 'img/logo.png' %}" alt="Logo" />
+            </div>
+            <!-- /Logo -->
+
+            <!-- Links Nav Bar -->
+            
+            
+            
+            <!-- <div class="links">
+              <ul>
+                <li><a href="{% url 'home' %}" class="btn">Home</a></li>
+                <li><a href="{% url 'about' %}">About Us</a></li>
+                <li><a href="{% url 'category' %}">Category</a></li>
+                <li><a href="{% url 'services' %}">Services</a></li>
+                
+              </ul>
+            </div> -->
+              <div class="links">
+                <ul>
+                    <li><a data-active="home" href="{% url 'home' %}"  >Home</a></li>
+                    <li><a data-active="about" href="{% url 'about' %}">About</a></li>
+
+                    <li  class="mainl" >
+                      <a data-active="category" href="{% url 'category' %}" >Catogery</a>
+                      <ul class="sub-ul">
+                       <li><a  href="{% url 'category' %}" >All Catogery</a></li> 
+                       
+                       {% for cat in category %}
+                         
+                         <li class="cat{{cat.id}}"><a href="#" >{{cat.Cname}}</a></li> 
+                       
+                       
+                       
+                      
+                       <!--<li><a href="#">Mobile App</a></li> 
+                       <li><a href="#" >Computer App</a></li>  -->
+
+                       {% endfor %}
+                      </ul>
+                    </li>
+
+                    <!-- <li><a href="category.html">Category</a></li> -->
+                    <li><a data-active="services" href="{% url 'services' %}">Services</a></li>
+                   
+                  </ul>
+              </div>
+            
+            
+            
+            <!-- /Links Nav Bar -->
+
+            <!-- OverLay Section -->
+            <div class="overlay"></div>
+            <!-- OverLay Section -->
+
+            <!-- Section Hamburger Menu -->
+            <div class="hamburger-menu">
+              <div class="bar"></div>
+            </div>
+            <!-- Section Hamburger Menu -->
+          </div>
+        </header>
+        <!-- /NavBar -->
+
+         </div> 
+
+        </main>  

@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+</head>
+<body id="about">
+{% block content %}
+
+   <div class="container">
+            <div class="head">    
+                <h1>About Us</h1>
+            </div>
+            <div class="row justify-content-center">
+                <!-- Back End -->
+
+                {% for moh in mohammed %}
+                  
+               
+
+                <!-- mohammed start -->
+                <div class="col-lg-4 col-md-6 col-sm-12 ">
+                    <div class="about">
+                        <div class="cont-img">
+                            <img src="{{moh.Mimg.url}}" alt="">
+                        </div>
+                        <div class="content-about">
+                            <div class="about-cont">
+                                <h3>{{moh.Mname}}</h3>
+                                <p>{{moh.Minfo}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- mohammed end -->
+                 {% endfor %}
+                <!-- /Back End -->
+
+
+                {% for rsl in rusul %}
+                  
+                
+
+                <!-- Mobile App -->
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="about">
+                        <div class="cont-img">
+                            <img src="{{rsl.Rimg.url}}" alt="">
+                        </div>
+                        <div class="content-about">
+                            <div class="about-cont">
+                                <h3>{{rsl.Rname}}</h3>
+                                <p>{{rsl.Rinfo}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Mobile App -->
+                {% endfor %}
+
+
+                {% for hsn in hussain %}
+                  
+               
+                <!-- Front End -->
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="about">
+                        <div class="cont-img">
+                            <img src="{{hsn.Himg.url}}" alt="">
+                        </div>
+                        <div class="content-about">
+                            <div class="about-cont">
+                                <h3>{{hsn.Hname}}</h3>
+                                <p>{{hsn.Hinfo}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Front End -->
+
+                 {% endfor %}
+
+            </div>
+    </div>
+
+
+
+{% endblock content %}
+
+</body>
+</html>

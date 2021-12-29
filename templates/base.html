@@ -1,0 +1,39 @@
+{% load static %}
+
+ <!-- <link rel="stylesheet" href="{% static 'css/style.css' %}"> -->
+<!-- <link rel="stylesheet" href="{% static 'css/media.css' %}"> -->
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+<!-- <link rel="stylesheet" href="{% static 'css/category.css' %}" /> -->
+<!-- <link rel="stylesheet" href="{% static 'css/about.css' %}" /> -->
+<!-- <link rel="stylesheet" href="{% static 'css/detels.css' %}"> -->
+<!-- <link rel="stylesheet" href="{% static 'css/services.css' %}">  -->
+ <link rel="stylesheet" href="{% static 'css/all.css' %}"> 
+
+{% include "parts/navbar.html" %}
+{% block content %}
+  
+{% endblock content %}
+{% include "parts/footer.html" %}
+
+
+ <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+  <script src="{% static 'js/app.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/jquery-3.5.1.min.js' %}"></script>
+<script src="{% static 'js/popper.min.js' %}"></script>
+
+
+
+<script>
+
+{% for project in all %}
+
+$(".cat{{project.category.id}}").click(function(){
+$(".projecthide").hide()
+$(".project{{project.category.id}}").show()
+document.getElementById("allcat").innerHTML=("{{project.category}}")
+});
+
+{% endfor %}
+
+</script>
