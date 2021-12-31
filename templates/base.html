@@ -9,13 +9,17 @@
 <!-- <link rel="stylesheet" href="{% static 'css/services.css' %}">  -->
  <link rel="stylesheet" href="{% static 'css/all.css' %}"> 
 
+ <main>
+ <div class="big-wrapper light">
 {% include "parts/navbar.html" %}
 {% block content %}
-  
+
+
 {% endblock content %}
+
 {% include "parts/footer.html" %}
-
-
+</div>
+</main>
  <script src="https://kit.fontawesome.com/a81368914c.js"></script>
   <script src="{% static 'js/app.js' %}"></script>
   <script src="{% static 'js/bootstrap.min.js' %}"></script>

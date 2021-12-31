@@ -36,6 +36,7 @@
 
 body {
     font-family: sans-serif;
+    
 }
 
 a {
@@ -51,6 +52,15 @@ a {
     background-color: var(--backgroundColor);
 
 }
+/* .containers{
+    background-color: var(--backgroundColor);
+    position: relative;
+    max-width: 81rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 3rem;
+    z-index: 10;
+} */
 
 .container {
     position: relative;
@@ -59,17 +69,22 @@ a {
     margin: 0 auto;
     padding: 0 3rem;
     z-index: 10;
+   
+   
 }
 
 header {
     position: relative;
     z-index: 70;
+    
 }
 
 header .container {
+    
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; 
+    
 }
 
 .overlay {
@@ -89,6 +104,7 @@ header .container {
 }
 
 .links a {
+   
     color: var(--lightTwo);
     padding: .5rem 1.5rem;
     display: inline-block;
@@ -106,8 +122,8 @@ header .container {
 .links a.active {
     background-color: #5bacdf;
     border-radius: 15px;
-    color: #000;
-    transform: scale(1.05);
+    color: rgb(7, 7, 7);
+    transform: scale(1.15);
 }
 
 .mainl .sub-ul {
@@ -200,7 +216,7 @@ header .container {
     height: 100px;
     /* align-items: flex-end; */
     /* position: fixed; */
-    bottom: -160px;
+    bottom: -150px;
     z-index: 1;
 
 }
@@ -272,10 +288,14 @@ header .container {
 }
 
 /* index .css*/
+.showcase-area{
+    overflow: hidden;
+}
 .showcase-area .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
 }
 
 .left {
@@ -304,7 +324,7 @@ header .container {
     line-height: 1.9;
 }
 
-.showcase-area .container .right {
+.big-wrapper .showcase-area .container .right {
     width: 40%;
 }
 

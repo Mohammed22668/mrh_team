@@ -82,7 +82,7 @@ events();
 let links = document.querySelectorAll(".links a");
 let bodyid = document.querySelector("body").id;
 for(let link of links){
-  if(link.dataset.active ==bodyid) {
+  if(link.dataset.active == bodyid) {
     link.classList.add("active");
   }
 }

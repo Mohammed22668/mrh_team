@@ -8,12 +8,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>home</title>
 </head>
-<body id="home">
+
 {% block content %}
+<body id="home">
 <!-- containt start -->
         <!-- Main Section -->
-        <div class="showcase-area">
-          <div class="container">
+        <main>
+        <!-- <div class="big-wrapper light" > -->
+          
+          <!-- <header >
+            <div class="container" >
+          <div class="logo">
+              <img src="{% static 'img/logo.png' %}" alt="Logo" />
+            </div>
+            <div class="links" >
+              <ul>
+                  <li><a data-active="home" href="{% url 'home' %}"  >Home</a></li>
+                  <li><a data-active="about" href="{% url 'about' %}">About</a></li>
+                  <li  class="mainl"  >
+                    <a data-active="category" href="{% url 'category' %}" >Catogery</a>
+                    <ul class="sub-ul">
+                     <li><a  href="{% url 'category' %}" >All Catogery</a></li> 
+                    {% for cat in category %} 
+                        <li class="cat{{cat.id}}"><a href="#" >{{cat.Cname}}</a></li> 
+                        {% endfor %} 
+                      </ul>
+                    </li>
+                  <li><a data-active="services" href="{% url 'services' %}">Services</a></li>
+                  </ul>
+              </div>
+              <div class="overlay"></div>
+              <div class="hamburger-menu">
+                <div class="bar"></div>
+              </div>
+              </div>
+              </header> -->
+
+        <div class="showcase-area" style="overflow: hidden;">
+          <div class="container" >
             <!-- Side Left -->
             <div class="left">
               <div class="big-title">
@@ -37,14 +69,16 @@
           </div>
           
         </div>
+      <!-- </div> -->
+        </main>
 
         <!-- contain  end-->
 
 
-
+      </body>
 
 {% endblock content %}
 
 
-</body>
+
 </html>

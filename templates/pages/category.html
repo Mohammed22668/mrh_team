@@ -9,11 +9,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Category</title>
 </head>
-<body id="category">
+
 
 {% block content %}
-
+<body id="category">
+    <main>
    <!-- category -->
+   <!-- <div class="big-wrapper light"> -->
           <div class="container">
               <div class="head">    
                 <h1 id="allcat">ALL Categories</h1>
@@ -22,10 +24,10 @@
               <div class="row justify-content-center p-4">
 
 
-                {% for project in all  %}
+                <!-- {% for project in all  %} -->
                   
                
-
+<!-- 
                 <div class="col-lg-4 col-md-6 col-sm-12 projecthide
                  project{{project.category.id}}">
                     <div class="content">
@@ -38,7 +40,7 @@
                     </div>
                 </div>
 
-                 {% endfor %}
+                 {% endfor %} -->
 
 
             
@@ -68,11 +70,12 @@
               </div>
             
           </div>
+   <!-- </div> -->
           <!-- /category -->
-
-
+        </main>
+        </body>
 {% endblock content %}
 
 
-</body>
+
 </html>

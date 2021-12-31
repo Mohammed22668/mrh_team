@@ -1,10 +1,12 @@
+
 {% load static %}
-<main>
-      <div class="big-wrapper light">
-        <img src="{% static 'img/shape.png' %}" alt="" class="shape" />
+
+ 
+      <!-- <div class="big-wrapper  light " > -->
+        <!-- <img src="{% static 'img/shape.png' %}" alt="" class="shape" /> -->
         <!-- NavBar -->
-        <header>
-            <div class="container">
+        <header >
+            <div class="container" >
             <!-- Logo -->
             <div class="logo">
               <img src="{% static 'img/logo.png' %}" alt="Logo" />
@@ -24,19 +26,19 @@
                 
               </ul>
             </div> -->
-              <div class="links">
+              <div class="links" >
                 <ul>
                     <li><a data-active="home" href="{% url 'home' %}"  >Home</a></li>
                     <li><a data-active="about" href="{% url 'about' %}">About</a></li>
 
-                    <li  class="mainl" >
+                    <li  class="mainl"  >
                       <a data-active="category" href="{% url 'category' %}" >Catogery</a>
                       <ul class="sub-ul">
                        <li><a  href="{% url 'category' %}" >All Catogery</a></li> 
                        
-                       {% for cat in category %}
+                      {% for cat in category %} 
                          
-                         <li class="cat{{cat.id}}"><a href="#" >{{cat.Cname}}</a></li> 
+                          <li class="cat{{cat.id}}"><a href="#" >{{cat.Cname}}</a></li>  
                        
                        
                        
@@ -44,7 +46,7 @@
                        <!--<li><a href="#">Mobile App</a></li> 
                        <li><a href="#" >Computer App</a></li>  -->
 
-                       {% endfor %}
+                        {% endfor %} 
                       </ul>
                     </li>
 
@@ -69,8 +71,9 @@
             <!-- Section Hamburger Menu -->
           </div>
         </header>
+  
         <!-- /NavBar -->
 
-         </div> 
+         <!-- </div>  -->
 
-        </main>  
+      
