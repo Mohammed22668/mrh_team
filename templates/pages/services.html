@@ -39,28 +39,34 @@
   
     <!-- row 1 -->
     <div class="row">
+
+      {% for post in posts %}
+        
+    
       <div class="col-6 col-md-4">
         <div class="card">
           <div class="card__header">
-            <img src="https://source.unsplash.com/600x400/?computer" alt="card__image" class="card__image" width="600">
+            <img src="{{post.Pimg.url}}" alt="card__image" class="card__image" width="600">
           </div>
           <div class="card__body">
-            <span class="tag tag-blue">Technology</span>
-            <h4>What's new in 2022 Tech</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi perferendis molestiae non nemo doloribus. Doloremque, nihil! At ea atque quidem!</p>
+            <span class="tag tag-blue">{{post.Pcategory}}</span>
+            <h4>{{post.Ptitle}}</h4>
+            <p>{{post.Pdetails}}</p>
           </div>
           <div class="card__footer">
             <div class="user">
-              <img src="https://i.pravatar.cc/40?img=1" alt="user__image" class="user__image">
+              <img src="{{post.Pmember.MMimg.url}}" alt="user__image" class="user__image" width="80" height="80">
               <div class="user__info">
-                <h5>Jane Doe</h5>
-                <small>2h ago</small>
+                <h5>{{post.Pmember}}</h5>
+                <small>{{post.Pdata_time}}</small>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-6 col-md-4">
+
+        {% endfor %}
+      <!-- <div class="col-6 col-md-4">
         <div class="card">
           <div class="card__header">
             <img src="https://source.unsplash.com/600x400/?food" alt="card__image" class="card__image" width="600">
@@ -80,8 +86,10 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="col-6 col-md-4">
+      </div> -->
+
+
+      <!-- <div class="col-6 col-md-4">
         <div class="card">
           <div class="card__header">
             <img src="https://source.unsplash.com/600x400/?car,automobile" alt="card__image" class="card__image" width="600">
@@ -101,8 +109,10 @@
             </div>
           </div>
         </div>
-      </div>
-    </div>
+          </div>
+      </div> -->
+
+
 
 
     </div>

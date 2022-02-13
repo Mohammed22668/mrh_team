@@ -20,7 +20,7 @@
             <div class="row justify-content-center">
                 <!-- Back End -->
 
-                {% for moh in mohammed %}
+                {% for moh in members %}
                   
                
 
@@ -28,12 +28,12 @@
                 <div class="col-lg-4 col-md-6 col-sm-12 ">
                     <div class="about">
                         <div class="cont-img">
-                            <img src="{{moh.Mimg.url}}" alt="">
+                            <img src="{{moh.MMimg.url}}" alt="">
                         </div>
                         <div class="content-about">
                             <div class="about-cont">
-                                <h3>{{moh.Mname}}</h3>
-                                <p>{{moh.Minfo}}
+                                <h3>{{moh.MMname}}</h3>
+                                <p>{{moh.MMinfo}}
                                 </p>
                             </div>
                         </div>
@@ -44,50 +44,10 @@
                 <!-- /Back End -->
 
 
-                {% for rsl in rusul %}
-                  
-                
-
-                <!-- Mobile App -->
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <div class="about">
-                        <div class="cont-img">
-                            <img src="{{rsl.Rimg.url}}" alt="">
-                        </div>
-                        <div class="content-about">
-                            <div class="about-cont">
-                                <h3>{{rsl.Rname}}</h3>
-                                <p>{{rsl.Rinfo}}
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- /Mobile App -->
-                {% endfor %}
+           
 
 
-                {% for hsn in hussain %}
-                  
-               
-                <!-- Front End -->
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <div class="about">
-                        <div class="cont-img">
-                            <img src="{{hsn.Himg.url}}" alt="">
-                        </div>
-                        <div class="content-about">
-                            <div class="about-cont">
-                                <h3>{{hsn.Hname}}</h3>
-                                <p>{{hsn.Hinfo}}
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- /Front End -->
-
-                 {% endfor %}
+             
 
             </div>
     </div>

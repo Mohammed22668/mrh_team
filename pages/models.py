@@ -4,6 +4,8 @@ from django.contrib.auth.models import User
 # from django.utils.translation import ungettext_lazy as _
 
 # Create your models here.
+
+
 class Category (models.Model):
     Cname=models.CharField(max_length=75,verbose_name="اسم الفئة")
     
@@ -65,3 +67,32 @@ class Mohammed(models.Model):
 
     def __str__(self):
         return str(self.Mname)
+
+
+class Members(models.Model):
+    MMname = models.OneToOneField(
+        User, on_delete=models.CASCADE, verbose_name="الاسم")
+    MMprof = models.CharField(
+        max_length=150, verbose_name="الاختصاص", blank=True)
+    MMinfo = models.TextField(
+        max_length=500, verbose_name="المعلومات", blank=True)
+    MMimg = models.ImageField(
+        upload_to="photos/%y/%m/%d", verbose_name="الصورة")
+
+    def __str__(self):
+        return str(self.MMname)
+    
+    
+class Posts(models.Model):
+    Ptitle = models.CharField(max_length=100 , verbose_name="Title" )
+    Pcategory = models.ForeignKey(Category,on_delete=models.CASCADE , verbose_name="Category")
+    Pdetails = models.TextField(verbose_name="Details",null=True)
+    Pimg = models.ImageField(upload_to="photos/%y/%m/%d" , verbose_name="Image")
+    Pdata_time = models.DateTimeField(default=datetime.now())
+    Pmember = models.ForeignKey(Members,on_delete=models.CASCADE,verbose_name="User")
+    
+    
+    def __str__(self):
+         return self.Ptitle
+
+    

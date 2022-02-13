@@ -16,11 +16,13 @@ def about(request):
     hussain = Hussain.objects.all()
     mohammed = Mohammed.objects.all()
     category = Category.objects.all().order_by("-Cname")
+    members = Members.objects.all()
     context={
         'rusul':rusul,
         'hussain':hussain,
         'mohammed':mohammed,
         'category': category,
+        'members':members,
     }
     
     
@@ -39,8 +41,9 @@ def category(request):
 
 def services(request):
     category = Category.objects.all().order_by("-Cname")
+    posts = Posts.objects.all().order_by('-Pdata_time')
     context = {
-        
+        'posts':posts,
         'category': category,
     }
     return render(request,'pages/services.html',context)
