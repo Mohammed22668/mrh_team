@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-zsr6m!!&&hg_bh4ih84rizre0b^e4#cmjk7u@b36on@-avgyi-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['iraqicoders.pythonanywhere.com','']
 
 
 # Application definition
@@ -127,11 +127,28 @@ STATICFILES_DIRS = [
 os.path.join(BASE_DIR,'mrh_project/static')                    
 ]
 
+# online 
+
+# STATIC_ROOT = '/home/iraqicoders/mrh_team/static'
+# STATIC_URL = 'static/'
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, 'mrh_project/static')
+# ]
+
 
 # MEDIA
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
+
+
+# online 
+# MEDIA
+
+# MEDIA_ROOT = '/home/iraqicoders/mrh_team/media'
+# MEDIA_URL = '/media/'
+
+
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
