@@ -42,4 +42,22 @@ document.getElementById("allcat").innerHTML=("{{project.category}}")
 
 {% endfor %}
 
+
+</script>
+
+
+
+  
+<script>
+
+{% for post in posts %}
+
+$(".cat{{post.Pcategory.id}}").click(function(){
+$(".posthide").hide()
+$(".post{{post.Pcategory.id}}").show()
+  });
+{% endfor %}
+
+
+
 </script>

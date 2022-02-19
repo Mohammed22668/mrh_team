@@ -5,8 +5,8 @@ from .models import *
 
 admin.site.register(Category)
 admin.site.register(Project)
-admin.site.register(Rusul)
-admin.site.register(Hussain)
-admin.site.register(Mohammed)
+# admin.site.register(Rusul)
+# admin.site.register(Hussain)
+# admin.site.register(Mohammed)
 admin.site.register(Members)
 admin.site.register(Posts)
