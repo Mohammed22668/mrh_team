@@ -56,3 +56,10 @@ def details(request,id):
         'category': category,
     }
     return render(request,'pages/details.html' , context)
+
+
+
+
+def articles(request):
+    
+    return render(request,'pages/article.html')
