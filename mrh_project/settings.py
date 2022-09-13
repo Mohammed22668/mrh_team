@@ -73,19 +73,27 @@ WSGI_APPLICATION = 'mrh_project.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
-
+# sqlite3
 DATABASES = {
     'default': {
          'ENGINE': 'django.db.backends.sqlite3',
          'NAME': BASE_DIR / 'db.sqlite3',
-        #   'ENGINE': 'django.db.backends.postgresql',
-        # 'NAME': 'MRH_PROJECT',
-        # 'USER':'postgres',
-        # 'PASSWORD':'EO61075EO',
-        # 'HOST':'localhost',
-        # 'PORT':'5432',
+     
     }
 }
+
+# DATABASES = {
+#     'default': {
+        
+#            'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'db_jaquarTeam',
+#         'USER':'postgres',
+#          'PASSWORD':'22668',
+#          'HOST':'localhost',
+#          'PORT':'5432',
+#     }
+# }
+
 
 
 # Password validation

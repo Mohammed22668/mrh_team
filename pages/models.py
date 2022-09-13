@@ -72,6 +72,8 @@ class Mohammed(models.Model):
 class Members(models.Model):
     MMname = models.OneToOneField(
         User, on_delete=models.CASCADE, verbose_name="الاسم")
+    MMfullname = models.CharField(max_length=150,
+         verbose_name="الاسم الكامل",blank=True)    
     MMprof = models.CharField(
         max_length=150, verbose_name="الاختصاص", blank=True)
     MMinfo = models.TextField(
